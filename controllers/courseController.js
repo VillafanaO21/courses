@@ -88,7 +88,7 @@ function courseHasStudent(course, student) {
 module.exports.enrollStudent= async function(req, res){
     await StudentCourses.create({
         student_id: req.body.student,
-        course_id: req.params.course_id
+        course_id: req.params.courseId
     });
     res.redirect(`/courses/profile/${req.params.courseId}`)
 }
